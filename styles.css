@@ -399,12 +399,12 @@ a:focus-visible {
 }
 
 .publications {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .section-kicker-light {
-  border-color: rgba(242, 239, 232, 0.25);
+  border-color: var(--line);
 }
 
 .section-heading-row {
@@ -429,7 +429,7 @@ a:focus-visible {
 .publication-heading-copy > p {
   max-width: 39rem;
   margin: 2rem 0 0;
-  color: rgba(245, 246, 244, 0.65);
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -450,9 +450,9 @@ a:focus-visible {
 
 .filter-button {
   padding: 0.65rem 0.9rem;
-  border: 1px solid rgba(245, 246, 244, 0.35);
+  border: 1px solid var(--line);
   background: transparent;
-  color: var(--paper);
+  color: var(--ink);
   cursor: pointer;
   font: inherit;
   font-size: 0.65rem;
@@ -475,11 +475,11 @@ a:focus-visible {
   align-items: center;
   min-height: 15rem;
   padding: 2.4rem 0;
-  border-top: 1px solid rgba(242, 239, 232, 0.25);
+  border-top: 1px solid var(--line);
 }
 
 .publication-item:last-child {
-  border-bottom: 1px solid rgba(242, 239, 232, 0.25);
+  border-bottom: 1px solid var(--line);
 }
 
 .publication-item[hidden] {
@@ -492,7 +492,7 @@ a:focus-visible {
   gap: 0.45rem;
   align-self: start;
   padding-top: 0.35rem;
-  color: rgba(245, 246, 244, 0.55);
+  color: var(--muted);
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -500,12 +500,12 @@ a:focus-visible {
 }
 
 .publication-meta span:first-child {
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .publication-content > p:first-child {
   margin: 0 0 0.75rem;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -523,7 +523,7 @@ a:focus-visible {
 
 .publication-content > p:last-child {
   margin: 1rem 0 0;
-  color: rgba(245, 246, 244, 0.62);
+  color: var(--muted);
   font-size: 0.78rem;
 }
 
@@ -550,7 +550,7 @@ a:focus-visible {
 }
 
 .workshops {
-  background: var(--paper-deep);
+  background: var(--paper);
 }
 
 .workshop-intro {
