@@ -183,7 +183,7 @@ a:focus-visible {
 }
 
 .hero h1 em,
-.about-lead h2 em {
+.section h2 em {
   color: var(--accent);
   font-weight: 400;
 }
@@ -424,11 +424,6 @@ a:focus-visible {
   font-weight: 400;
   letter-spacing: -0.065em;
   line-height: 0.9;
-}
-
-.section-heading-row h2 em {
-  color: var(--accent);
-  font-weight: 400;
 }
 
 .publication-heading-copy > p {
