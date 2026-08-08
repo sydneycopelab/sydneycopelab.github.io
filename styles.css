@@ -87,7 +87,7 @@ a:focus-visible {
   z-index: 2;
   display: inline-flex;
   gap: 0.85rem;
-  align-items: flex-end;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -110,10 +110,6 @@ a:focus-visible {
 
 .brand-name span {
   white-space: nowrap;
-}
-
-.brand-name .brand-name-accent {
-  color: var(--accent-strong);
 }
 
 .site-nav {
