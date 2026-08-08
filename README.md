@@ -4,7 +4,7 @@ Static website for the Conflict and Peace Economics Lab, built for GitHub Pages.
 
 ## Publishing
 
-The site has no build step. It loads the open-source Newsreader and DM Sans families from Google Fonts. In the repository settings on GitHub, set **Pages → Build and deployment → Source** to **Deploy from a branch**, then select the `main` branch and `/ (root)` folder.
+The site has no build step. It loads the open-source DM Serif Display and DM Sans families from Google Fonts. In the repository settings on GitHub, set **Pages → Build and deployment → Source** to **Deploy from a branch**, then select the `main` branch and `/ (root)` folder.
 
 ## Updating content
 

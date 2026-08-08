@@ -10,7 +10,7 @@
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
   --header-height: 6.5rem;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
 }
 
 * {
