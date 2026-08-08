@@ -112,6 +112,10 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.brand-name .brand-name-accent {
+  color: var(--accent-strong);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
