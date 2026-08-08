@@ -7,16 +7,16 @@
 }
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("assets/fonts/fraunces-latin.woff2") format("woff2");
+  font-family: "Bitter";
+  src: url("assets/fonts/bitter-latin.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: block;
 }
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("assets/fonts/fraunces-italic-latin.woff2") format("woff2");
+  font-family: "Bitter";
+  src: url("assets/fonts/bitter-italic-latin.woff2") format("woff2");
   font-style: italic;
   font-weight: 400;
   font-display: block;
@@ -34,7 +34,7 @@
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
   --header-height: 6.5rem;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Bitter", Georgia, "Times New Roman", serif;
   --type-meta: 0.75rem;
   --type-small: 0.875rem;
   --type-body: 1rem;
@@ -220,7 +220,6 @@ a:focus-visible {
   font-family: var(--font-display);
   font-size: var(--type-hero);
   font-weight: 400;
-  font-optical-sizing: auto;
   letter-spacing: -0.055em;
   line-height: 0.78;
 }
@@ -308,7 +307,6 @@ a:focus-visible {
   font-family: var(--font-display);
   font-size: var(--type-section);
   font-weight: 400;
-  font-optical-sizing: auto;
   letter-spacing: -0.045em;
   line-height: 0.9;
 }

@@ -4,7 +4,7 @@ Static website for the Conflict and Peace Economics Lab, built for GitHub Pages.
 
 ## Publishing
 
-The site has no build step. It self-hosts the open-source Fraunces and DM Sans families from `assets/fonts`. In the repository settings on GitHub, set **Pages → Build and deployment → Source** to **Deploy from a branch**, then select the `main` branch and `/ (root)` folder.
+The site has no build step. It self-hosts the open-source Bitter and DM Sans families from `assets/fonts`. In the repository settings on GitHub, set **Pages → Build and deployment → Source** to **Deploy from a branch**, then select the `main` branch and `/ (root)` folder.
 
 ## Updating content
 
