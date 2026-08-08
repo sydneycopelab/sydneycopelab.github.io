@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/dm-sans-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("assets/fonts/dm-serif-display-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("assets/fonts/dm-serif-display-italic-latin.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+}
+
 :root {
   --paper: #f5f6f4;
   --paper-deep: #e9edf0;
@@ -11,6 +35,14 @@
   --header-height: 6.5rem;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
   --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --type-meta: 0.75rem;
+  --type-small: 0.875rem;
+  --type-body: 1rem;
+  --type-lead: clamp(1.05rem, 1.35vw, 1.25rem);
+  --type-profile: clamp(1.2rem, 1.5vw, 1.5rem);
+  --type-subheading: clamp(1.65rem, 2.5vw, 2.5rem);
+  --type-section: clamp(3.5rem, 7vw, 7rem);
+  --type-hero: clamp(5rem, 10.5vw, 10.5rem);
 }
 
 * {
@@ -26,8 +58,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: var(--type-body);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -103,7 +135,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  font-size: 0.78rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.075em;
   line-height: 1.35;
@@ -118,7 +150,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: clamp(1.4rem, 3vw, 3rem);
-  font-size: 0.77rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -182,19 +214,11 @@ a:focus-visible {
   content: "";
 }
 
-.eyebrow {
-  margin: 0 0 2rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
 .hero h1 {
   max-width: 11ch;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(5rem, 10.5vw, 10.8rem);
+  font-size: var(--type-hero);
   font-weight: 400;
   letter-spacing: -0.075em;
   line-height: 0.76;
@@ -209,8 +233,8 @@ a:focus-visible {
 .hero-intro {
   max-width: 34rem;
   margin: 3.5rem 0 2rem;
-  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
-  line-height: 1.55;
+  font-size: var(--type-lead);
+  line-height: 1.6;
 }
 
 .text-link {
@@ -219,7 +243,7 @@ a:focus-visible {
   align-items: center;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid currentColor;
-  font-size: 0.72rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-decoration: none;
@@ -243,7 +267,7 @@ a:focus-visible {
   grid-template-columns: minmax(4rem, 1fr) 3fr;
   padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--line);
-  font-size: 0.7rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -265,20 +289,23 @@ a:focus-visible {
   padding: clamp(4rem, 8vw, 7.5rem) 0;
 }
 
-.about-lead h2 {
+.about-lead h2,
+.section-heading-row h2,
+.workshop-intro h2,
+.contact h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6.4vw, 6.6rem);
+  font-size: var(--type-section);
   font-weight: 400;
   letter-spacing: -0.055em;
-  line-height: 0.98;
+  line-height: 0.9;
 }
 
 .about-lead p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: var(--type-lead);
+  line-height: 1.6;
 }
 
 .team-grid {
@@ -313,7 +340,7 @@ a:focus-visible {
 
 .profile-copy h3 {
   margin: 0 0 0.45rem;
-  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  font-size: var(--type-profile);
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.15;
@@ -323,7 +350,7 @@ a:focus-visible {
   max-width: 19rem;
   margin: 0;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1.45;
@@ -347,22 +374,11 @@ a:focus-visible {
   padding: clamp(4rem, 7vw, 7rem) 0 3rem;
 }
 
-.section-heading-row h2,
-.workshop-intro h2,
-.contact h2 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(3.8rem, 7.5vw, 8rem);
-  font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 0.9;
-}
-
 .publication-heading-copy > p {
   max-width: 39rem;
   margin: 2rem 0 0;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -387,7 +403,7 @@ a:focus-visible {
   color: var(--ink);
   cursor: pointer;
   font: inherit;
-  font-size: 0.65rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -425,7 +441,7 @@ a:focus-visible {
   align-self: start;
   padding-top: 0.35rem;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -438,7 +454,7 @@ a:focus-visible {
 .publication-content > p:first-child {
   margin: 0 0 0.75rem;
   color: var(--accent-strong);
-  font-size: 0.66rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -448,7 +464,7 @@ a:focus-visible {
   max-width: 28ch;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: clamp(1.55rem, 2.7vw, 2.8rem);
+  font-size: var(--type-subheading);
   font-weight: 400;
   line-height: 1.1;
 }
@@ -456,7 +472,7 @@ a:focus-visible {
 .publication-content > p:last-child {
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--type-small);
 }
 
 .publication-link {
@@ -465,7 +481,7 @@ a:focus-visible {
   justify-content: space-between;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid currentColor;
-  font-size: 0.66rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -496,8 +512,8 @@ a:focus-visible {
 .workshop-intro p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: var(--type-lead);
+  line-height: 1.6;
 }
 
 .workshop-list {
@@ -523,14 +539,14 @@ a:focus-visible {
 .workshop-year {
   align-self: start;
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: var(--type-meta);
   font-weight: 700;
 }
 
 .workshop-info > p {
   margin: 0 0 0.7rem;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -538,10 +554,11 @@ a:focus-visible {
 
 .workshop-info h3 {
   margin: 0 0 1.4rem;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-family: var(--font-sans);
+  font-size: var(--type-subheading);
   font-weight: 400;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
 }
 
 .workshop-info ul {
@@ -556,7 +573,7 @@ a:focus-visible {
 .workshop-info li {
   padding: 0.35rem 0.6rem;
   border: 1px solid var(--line);
-  font-size: 0.62rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -598,7 +615,7 @@ a:focus-visible {
   align-items: center;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid currentColor;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -614,7 +631,7 @@ a:focus-visible {
   padding: 3rem var(--page-padding);
   background: var(--ink);
   color: var(--paper);
-  font-size: 0.65rem;
+  font-size: var(--type-meta);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -666,7 +683,7 @@ a:focus-visible {
     color: inherit;
     cursor: pointer;
     font: inherit;
-    font-size: 0.68rem;
+    font-size: var(--type-meta);
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -726,7 +743,7 @@ a:focus-visible {
     border: 0;
     border-bottom: 1px solid;
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: var(--type-meta);
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -804,22 +821,15 @@ a:focus-visible {
     padding-bottom: 7rem;
   }
 
-  .hero .eyebrow {
-    max-width: 15rem;
-  }
-
   .section-kicker {
     grid-template-columns: 4rem 1fr;
   }
 
-  .about-lead h2 {
-    font-size: clamp(2.7rem, 13vw, 4.2rem);
-  }
-
+  .about-lead h2,
   .section-heading-row h2,
   .workshop-intro h2,
   .contact h2 {
-    font-size: clamp(3.2rem, 16vw, 5rem);
+    font-size: clamp(3rem, 15vw, 4.75rem);
   }
 
   .publication-item {
@@ -840,17 +850,13 @@ a:focus-visible {
     display: none;
   }
 
-  .workshop-info h3 {
-    font-size: 2.2rem;
-  }
-
   .contact {
     min-height: 38rem;
   }
 
   .contact a {
     gap: 0.7rem;
-    font-size: 0.67rem;
+    font-size: var(--type-meta);
   }
 
   .site-footer {
