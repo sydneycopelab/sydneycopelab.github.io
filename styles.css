@@ -279,63 +279,53 @@ a:focus-visible {
   line-height: 1.75;
 }
 
-.research-grid {
+.team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 2.25rem);
 }
 
-.research-card {
-  min-height: 21rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem clamp(1.2rem, 2.5vw, 2.5rem) 2.5rem;
-  border-right: 1px solid var(--line);
-  transition: background-color 220ms ease, color 220ms ease;
+.profile-card {
+  min-width: 0;
 }
 
-.research-card:first-child {
-  padding-left: 0;
+.profile-photo {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  background: var(--paper-deep);
+  color: var(--accent-strong);
+  overflow: hidden;
 }
 
-.research-card:last-child {
-  padding-right: 0;
-  border-right: 0;
-}
-
-.research-card:hover {
-  background: var(--acid);
-  color: var(--ink);
-}
-
-.research-card:first-child:hover {
-  padding-left: clamp(1.2rem, 2.5vw, 2.5rem);
-}
-
-.research-card:last-child:hover {
-  padding-right: clamp(1.2rem, 2.5vw, 2.5rem);
-}
-
-.card-number {
-  font-size: 0.7rem;
+.profile-photo span {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
   font-weight: 700;
+  letter-spacing: -0.06em;
+  opacity: 0.55;
 }
 
-.research-card h3 {
-  max-width: 12ch;
-  margin: 0 0 1.2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+.profile-copy {
+  padding-top: 1.25rem;
+}
+
+.profile-copy h3 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
   font-weight: 400;
-  line-height: 1.05;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
-.research-card p {
-  max-width: 30rem;
+.profile-copy p {
+  max-width: 19rem;
   margin: 0;
   color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
 .publications {
@@ -767,31 +757,9 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .research-card,
-  .research-card:first-child,
-  .research-card:last-child {
-    min-height: auto;
-    padding: 2rem 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .research-card:last-child {
-    border-bottom: 0;
-  }
-
-  .research-card:hover,
-  .research-card:first-child:hover,
-  .research-card:last-child:hover {
-    padding: 2rem 1.2rem;
-  }
-
-  .card-number {
-    margin-bottom: 4rem;
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3rem;
   }
 
   .section-heading-row {
