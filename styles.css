@@ -85,15 +85,31 @@ a:focus-visible {
 
 .brand {
   z-index: 2;
-  display: block;
+  display: inline-flex;
+  gap: 0.85rem;
+  align-items: center;
   text-decoration: none;
 }
 
 .brand-logo {
   display: block;
-  width: clamp(13rem, 22vw, 19rem);
-  height: auto;
-  mix-blend-mode: multiply;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.brand-name span {
+  white-space: nowrap;
 }
 
 .site-nav {
@@ -885,8 +901,18 @@ a:focus-visible {
 }
 
 @media (max-width: 600px) {
+  .brand {
+    gap: 0.65rem;
+  }
+
   .brand-logo {
-    width: 12rem;
+    width: 2.85rem;
+    height: 2.85rem;
+  }
+
+  .brand-name {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
   }
 
   .hero {
