@@ -2,7 +2,7 @@
   font-family: "DM Sans";
   src: url("assets/fonts/dm-sans-latin.woff2") format("woff2");
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 300 800;
   font-display: block;
 }
 
@@ -135,10 +135,10 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  font-size: 0.825rem;
-  font-weight: 700;
-  letter-spacing: 0.075em;
-  line-height: 1.35;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
@@ -704,8 +704,8 @@ a:focus-visible {
   }
 
   .brand-name {
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    letter-spacing: 0.045em;
   }
 
   .hero {
