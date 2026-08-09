@@ -32,7 +32,7 @@
   --acid: #cfeaff;
   --line: rgba(23, 23, 22, 0.2);
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
-  --header-height: 6.5rem;
+  --header-height: 8rem;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
   --font-display: "Spectral", Georgia, "Times New Roman", serif;
   --type-meta: 0.75rem;
@@ -111,7 +111,7 @@ a:focus-visible {
 }
 
 .site-header.is-scrolled {
-  height: 5rem;
+  height: 6rem;
   background: rgba(245, 246, 244, 0.94);
   border-color: var(--line);
   backdrop-filter: blur(12px);
@@ -120,22 +120,22 @@ a:focus-visible {
 .brand {
   z-index: 2;
   display: inline-flex;
-  gap: 0.85rem;
+  gap: 1rem;
   align-items: center;
   text-decoration: none;
 }
 
 .brand-logo {
   display: block;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.75rem;
+  height: 4.75rem;
 }
 
 .brand-name {
   display: flex;
   flex-direction: column;
   color: var(--ink);
-  font-size: var(--type-meta);
+  font-size: 0.825rem;
   font-weight: 700;
   letter-spacing: 0.075em;
   line-height: 1.35;
@@ -177,17 +177,6 @@ a:focus-visible {
 .site-nav a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-.nav-contact {
-  padding: 0.8rem 1.1rem;
-  border: 1px solid var(--ink);
-  transition: background 180ms ease, color 180ms ease;
-}
-
-.nav-contact:hover {
-  background: var(--ink);
-  color: var(--paper);
 }
 
 .menu-toggle {
@@ -232,7 +221,7 @@ a:focus-visible {
 
 .hero-intro,
 .about-lead p,
-.publication-heading-copy > p,
+.section-heading-row > p,
 .workshop-intro p {
   color: var(--muted);
   font-size: var(--type-lead);
@@ -244,51 +233,12 @@ a:focus-visible {
 
 .hero-intro {
   max-width: 34rem;
-  margin: 3.5rem 0 2rem;
-}
-
-.text-link {
-  display: inline-flex;
-  gap: 2.2rem;
-  align-items: center;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid currentColor;
-  font-size: var(--type-meta);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.text-link span {
-  transition: transform 180ms ease;
-}
-
-.text-link:hover span {
-  transform: translateY(4px);
+  margin: 3.5rem 0 0;
 }
 
 .section {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
   padding: clamp(6rem, 11vw, 10rem) var(--page-padding);
-}
-
-.section-kicker {
-  display: grid;
-  grid-template-columns: minmax(4rem, 1fr) 3fr;
-  padding-bottom: 1.4rem;
-  border-bottom: 1px solid var(--line);
-  font-size: var(--type-meta);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.section-kicker span {
-  color: var(--accent);
-}
-
-.section-kicker p {
-  margin: 0;
 }
 
 .about-lead {
@@ -296,7 +246,7 @@ a:focus-visible {
   grid-template-columns: minmax(0, 2fr) minmax(17rem, 0.85fr);
   gap: clamp(3rem, 8vw, 9rem);
   align-items: end;
-  padding: clamp(4rem, 8vw, 7.5rem) 0;
+  padding: 0 0 clamp(4rem, 8vw, 7.5rem);
 }
 
 .about-lead h2,
@@ -369,53 +319,21 @@ a:focus-visible {
   color: var(--ink);
 }
 
-.section-kicker-light {
-  border-color: var(--line);
-}
-
 .section-heading-row {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(17rem, 0.85fr);
+  gap: clamp(3rem, 8vw, 9rem);
   align-items: flex-end;
-  justify-content: space-between;
-  padding: clamp(4rem, 7vw, 7rem) 0 3rem;
+  padding: 0 0 clamp(4rem, 7vw, 7rem);
 }
 
-.publication-heading-copy > p {
-  max-width: 39rem;
-  margin: 2rem 0 0;
+.section-heading-row > p {
+  margin: 0;
 }
 
-.publication-heading-copy > p a {
+.section-heading-row > p a {
   color: var(--accent);
   text-underline-offset: 0.25rem;
-}
-
-.publication-filters {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.filter-button {
-  padding: 0.65rem 0.9rem;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  font: inherit;
-  font-size: var(--type-meta);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.filter-button:hover,
-.filter-button.is-active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--ink);
 }
 
 .publication-item {
@@ -508,7 +426,7 @@ a:focus-visible {
   grid-template-columns: minmax(0, 2fr) minmax(17rem, 0.75fr);
   gap: clamp(3rem, 8vw, 9rem);
   align-items: end;
-  padding: clamp(4rem, 8vw, 7rem) 0;
+  padding: 0 0 clamp(4rem, 8vw, 7rem);
 }
 
 .workshop-intro p {
@@ -638,10 +556,7 @@ a:focus-visible {
 
 .site-footer > p {
   margin: 0;
-}
-
-.site-footer > p:last-child {
-  text-align: right;
+  text-align: left;
 }
 
 .footer-brand {
@@ -669,7 +584,7 @@ a:focus-visible {
 
 @media (max-width: 900px) {
   :root {
-    --header-height: 5.5rem;
+    --header-height: 6.5rem;
   }
 
   .menu-toggle {
@@ -736,23 +651,6 @@ a:focus-visible {
     transform: translateY(0);
   }
 
-  .site-nav .nav-contact {
-    margin-top: 1.5rem;
-    padding: 0.6rem 0;
-    border: 0;
-    border-bottom: 1px solid;
-    font-family: var(--font-sans);
-    font-size: var(--type-meta);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .site-nav .nav-contact:hover {
-    background: transparent;
-    color: inherit;
-  }
-
   .hero {
     align-content: center;
     padding-top: calc(var(--header-height) + 3rem);
@@ -781,12 +679,7 @@ a:focus-visible {
   }
 
   .section-heading-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .publication-filters {
-    justify-content: flex-start;
+    grid-template-columns: 1fr;
   }
 
   .publication-item {
@@ -806,22 +699,18 @@ a:focus-visible {
   }
 
   .brand-logo {
-    width: 2.85rem;
-    height: 2.85rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .brand-name {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.06em;
   }
 
   .hero {
     min-height: 48rem;
     padding-bottom: 7rem;
-  }
-
-  .section-kicker {
-    grid-template-columns: 4rem 1fr;
   }
 
   .about-lead h2,
@@ -863,9 +752,6 @@ a:focus-visible {
     align-items: start;
   }
 
-  .site-footer > p:last-child {
-    text-align: left;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

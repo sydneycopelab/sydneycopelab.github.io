@@ -10,5 +10,5 @@ The site has no build step. It self-hosts the open-source Spectral and DM Sans f
 
 - Page content is in `index.html`.
 - Visual styling and responsive layouts are in `styles.css`.
-- Navigation, scroll effects, and publication filters are in `script.js`.
+- Navigation and scroll effects are in `script.js`.
 - The header uses the standalone mark in `assets/my_plot.svg`, paired with a text wordmark in the page markup.

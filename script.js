@@ -2,8 +2,6 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector(".menu-toggle");
 const menuLabel = document.querySelector(".menu-label");
 const navLinks = document.querySelectorAll(".site-nav a");
-const filterButtons = document.querySelectorAll("[data-filter]");
-const publicationItems = document.querySelectorAll("[data-category]");
 const revealItems = document.querySelectorAll(".reveal");
 const year = document.querySelector("[data-year]");
 
@@ -27,22 +25,6 @@ navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-
-    filterButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle("is-active", isActive);
-      item.setAttribute("aria-pressed", String(isActive));
-    });
-
-    publicationItems.forEach((item) => {
-      item.hidden = filter !== "all" && item.dataset.category !== filter;
-    });
-  });
 });
 
 if ("IntersectionObserver" in window) {
