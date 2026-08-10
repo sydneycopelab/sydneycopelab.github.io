@@ -139,8 +139,8 @@ a:focus-visible {
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.055em;
-  line-height: 1.05;
-  padding-bottom: 0.25rem;
+  line-height: 0.9;
+  padding-bottom: 0;
   text-transform: uppercase;
 }
 
@@ -718,7 +718,6 @@ a:focus-visible {
   .brand-name {
     font-size: 0.8rem;
     letter-spacing: 0.045em;
-    padding-bottom: 0.125rem;
   }
 
   .hero {
