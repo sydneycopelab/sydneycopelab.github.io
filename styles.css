@@ -22,6 +22,14 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "Caveat";
+  src: url("assets/fonts/caveat-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: block;
+}
+
 :root {
   --paper: #f5f6f4;
   --paper-deep: #e9edf0;
@@ -34,8 +42,7 @@
   --page-padding: clamp(1.25rem, 4vw, 4.5rem);
   --header-height: 8rem;
   --font-sans: "DM Sans", Arial, Helvetica, sans-serif;
-  --font-heading: "Spectral", Georgia, "Times New Roman", serif;
-  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-script: "Caveat", "Segoe Print", cursive;
   --type-meta: 0.75rem;
   --type-small: 0.875rem;
   --type-body: 1rem;
@@ -208,7 +215,7 @@ a:focus-visible {
 .hero h1 {
   max-width: 11ch;
   margin: 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: var(--type-hero);
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -218,7 +225,8 @@ a:focus-visible {
 .hero h1 em,
 .section h2 em {
   color: var(--accent);
-  font-family: var(--font-display);
+  font-family: var(--font-script);
+  font-style: normal;
   font-weight: 400;
 }
 
@@ -264,7 +272,7 @@ a:focus-visible {
 .workshop-intro h2,
 .contact h2 {
   margin: 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: var(--type-section);
   font-weight: 400;
   letter-spacing: -0.035em;
